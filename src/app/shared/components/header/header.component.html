@@ -1,1 +1,26 @@
-<p>header works!</p>
+<!DOCTYPE html>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Custom Toolbar</span>
+    
+    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" *ngIf="deviceLayout == 'mobile'">
+        <div fxLayout="row" fxLayoutGap="20px" fxShow >
+          <button mat-icon-button (click)="toggleSideBar()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        </div>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row *ngIf="deviceLayout == 'web'">
+    <button mat-button [matMenuTriggerFor]="menu">File</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>New</button>
+      <button mat-menu-item>Open</button>
+      <button mat-menu-item [matMenuTriggerFor]="recent">Recent</button>
+    </mat-menu>
+    <mat-menu #recent="matMenu">
+      <button mat-menu-item>File 1</button>
+      <button mat-menu-item>File 2</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
