@@ -1,5 +1,18 @@
-.mat-button{
-    color: white !important;
-    list-style: none;
-    text-decoration: none;
+:host{
+    .mat-toolbar {
+        padding-top: 10px;
+    }
+
+    .mat-icon-button{
+        background-color: transparent;
+    }
+    
+    button{
+        background-color: transparent;
+    }
+    mat-icon{
+        color: white;
+        font-size: 40px;
+        padding-right: 10px;
+    }
 }

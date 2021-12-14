@@ -7,7 +7,7 @@ import {BreakpointObserver, Breakpoints} from '@angular/cdk/layout';
 })
 export class LayoutComponent implements OnInit {
 
-  sideBarOpen = true;
+  sideBarOpen = false;
   deviceLayout = 'web';
 
   constructor( breakpointObserver: BreakpointObserver ) { 
@@ -32,6 +32,7 @@ export class LayoutComponent implements OnInit {
 
   activateMobileLayout(){
     this.deviceLayout = "mobile";
+    // this.sideBarOpen = false;
   }
 
   activateWebLayout(){

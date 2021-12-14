@@ -11,6 +11,8 @@ export class HeaderComponent implements OnInit {
 
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
 
+  imgSrc: string = '/assets/images/gta-wordmark--white.svg';
+
   constructor() { }
 
   ngOnInit(): void {

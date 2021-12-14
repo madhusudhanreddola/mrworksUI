@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>Custom Toolbar</span>
-    
-    <div fxFlex fxLayout="row" fxLayoutAlign="flex-end" *ngIf="deviceLayout == 'mobile'">
-        <div fxLayout="row" fxLayoutGap="20px" fxShow >
-          <button mat-icon-button (click)="toggleSideBar()">
+    <div fxFlex fxLayout="row" fxLayoutGap="20px">
+      <div>
+        <img src="/assets/images/ga-logo--gold.svg" alt="GTA" height="60" />
+      </div>
+      <div>
+        <img
+          [src]="imgSrc"
+          (mouseover)="imgSrc = '/assets/images/gta-wordmark--gold.svg'"
+          (mouseout)="imgSrc = '/assets/images/gta-wordmark--white.svg'"
+          alt="GTA TEXT"
+          height="60"
+        />
+      </div>
+      <div fxFlex>
+
+      </div>
+      <div *ngIf="deviceLayout == 'mobile'" style="margin-left: auto;">        
+          <span mat-icon-button (click)="toggleSideBar()">
             <mat-icon>menu</mat-icon>
-        </button>
-        </div>
+          </span>
+      </div>
     </div>
   </mat-toolbar-row>
   <mat-toolbar-row *ngIf="deviceLayout == 'web'">
-    <button mat-button [matMenuTriggerFor]="menu">File</button>
+    <button mat-button [matMenuTriggerFor]="menu">Cloud</button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>New</button>
+      <button mat-menu-item>View PeachSafe</button>
       <button mat-menu-item>Open</button>
       <button mat-menu-item [matMenuTriggerFor]="recent">Recent</button>
     </mat-menu>
