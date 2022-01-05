@@ -1,18 +1,20 @@
 :host{
     .mat-toolbar {
+        // background-color: #175959;
         padding-top: 10px;
     }
 
-    .mat-icon-button{
-        background-color: transparent;
+    .menu-text-button {
+        color: white; 
+        font-size: medium; 
+        background: none !important; 
+        border: none !important;
     }
-    
-    button{
-        background-color: transparent;
-    }
+
     mat-icon{
         color: white;
         font-size: 40px;
         padding-right: 10px;
     }
 }
+
