@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <app-header (toggleSideBarForMe)="sideBarToggler()"  [deviceLayout]="deviceLayout"></app-header>
 <mat-drawer-container>
-    <mat-drawer mode="side" [opened]="sideBarOpen">
+    <mat-drawer mode="over" [opened]="sideBarOpen">
       <app-sidebar></app-sidebar>
     </mat-drawer>
     <mat-drawer-content>

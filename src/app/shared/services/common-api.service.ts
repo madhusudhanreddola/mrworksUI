@@ -1,41 +1,22 @@
-import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
-import { NavItem } from '../../model/nav-item';
-import { CommonApiService } from '../../services/common-api.service';
+import { Injectable } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
+import { NavItem } from '../model/nav-item';
 
-@Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+@Injectable({
+  providedIn: 'root'
 })
-export class HeaderComponent implements OnInit {
+export class CommonApiService {
 
-  @Input() deviceLayout:string = '';
+  private subject = new Subject<NavItem[]>();
 
-  @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
-
-  imgSrc: string = '/assets/images/gta-wordmark--white.svg';
-
- navItems1!: NavItem[];
-  
-  constructor(private apiService: CommonApiService) { 
+  constructor() { 
     
   }
 
-  ngOnInit(): void {
-    console.log('Header deviceLayout : ' + this.deviceLayout);
-     /* this.apiService.getAllMenuItems().subscribe(data => {
-        console.log(data);
-        this.navItems = data;
-     }); */
-  }
 
-  toggleSideBar(){
-    this.toggleSideBarForMe.emit();
-    setTimeout(() => {
-      window.dispatchEvent(
-        new Event('resize')
-      );
-    }, 300);
+   getAllMenuItems():Observable<NavItem[]> {
+    this.subject.next(this.navItems);
+    return this.subject.asObservable();
   }
 
   navItems: NavItem[] = [
@@ -377,5 +358,5 @@ export class HeaderComponent implements OnInit {
       ]
     }
   ];
-
+  
 }

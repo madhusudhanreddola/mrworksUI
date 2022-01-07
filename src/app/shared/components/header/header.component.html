@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <mat-toolbar color="primary">
-  <mat-toolbar-row style="padding-top: 3%; padding-bottom: 3%;">
+  <mat-toolbar-row ngClass.lt-sm="small-padding" ngClass="reg-padding">
     <div fxFlex fxLayout="row" fxLayoutGap="20px">
       <div>
         <img src="/assets/images/ga-logo--gold.svg" alt="GTA" height="60" />
@@ -19,17 +19,17 @@
       </div>
       <div *ngIf="deviceLayout == 'mobile'" style="margin-left: auto;">        
           <span mat-icon-button (click)="toggleSideBar()">
-            <mat-icon>menu</mat-icon>
+            <mat-icon class="menu-toggle-btn">menu</mat-icon>
           </span>
       </div>
     </div>
   </mat-toolbar-row>
-  <mat-toolbar-row *ngIf="deviceLayout == 'web'" style="border-top: 1px white solid;">
+  <mat-toolbar-row *ngIf="deviceLayout == 'web'" style="border-top: 1px white solid;" class="menu-bar mat-elevation-z1">
    
-    <a mat-menu-item [matMenuTriggerFor]="menu" class="menu-text-button">Cloud</a>
+    <a mat-menu-item [matMenuTriggerFor]="menu1" class="menu-text-button"><mat-icon>keyboard_arrow_right</mat-icon>Cloud</a>
 
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>View PeachSafe</button>
+    <mat-menu #menu1="matMenu">
+      <button mat-menu-item routerLink="/viewPeachSafe">View PeachSafe</button>
       <button mat-menu-item>Open</button>
       <button mat-menu-item [matMenuTriggerFor]="recent">Recent</button>
     </mat-menu>
@@ -39,7 +39,7 @@
       <button mat-menu-item>File 2</button>
     </mat-menu>
 
-    <a mat-menu-item [matMenuTriggerFor]="aboveMenu" class="menu-text-button">Above</a>
+    <a mat-menu-item [matMenuTriggerFor]="aboveMenu" class="menu-text-button"><mat-icon>keyboard_arrow_right</mat-icon>Above</a>
     <!-- #docregion menu-position -->
     <mat-menu #aboveMenu="matMenu" yPosition="above">
     <!-- #enddocregion menu-position -->
@@ -47,23 +47,28 @@
       <button mat-menu-item>Item 2</button>
     </mat-menu>
     
-    <a mat-menu-item [matMenuTriggerFor]="belowMenu" class="menu-text-button">Below</a>
+    <a mat-menu-item [matMenuTriggerFor]="belowMenu" class="menu-text-button"><mat-icon>keyboard_arrow_right</mat-icon>Below</a>
     <mat-menu #belowMenu="matMenu" yPosition="below">
       <button mat-menu-item>Item 1</button>
       <button mat-menu-item>Item 2</button>
     </mat-menu>
     
-    <a mat-menu-item [matMenuTriggerFor]="beforeMenu" class="menu-text-button">Before</a>
+    <a mat-menu-item [matMenuTriggerFor]="beforeMenu" class="menu-text-button"><span><mat-icon>keyboard_arrow_right</mat-icon>Before</span></a>
     <mat-menu #beforeMenu="matMenu" xPosition="before">
       <button mat-menu-item>Item 1</button>
       <button mat-menu-item>Item 2</button>
     </mat-menu>
     
     
-    <a mat-menu-item [matMenuTriggerFor]="afterMenu" class="menu-text-button">After</a>
+    <a mat-menu-item [matMenuTriggerFor]="afterMenu" class="menu-text-button"><mat-icon>keyboard_arrow_right</mat-icon>After</a>
     <mat-menu #afterMenu="matMenu" xPosition="after">
       <button mat-menu-item>Item 1</button>
       <button mat-menu-item>Item 2</button>
     </mat-menu>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+      <mat-nav-list fxLayout="row">
+        <app-menu-item *ngFor="let item of navItems" [item]="item" ></app-menu-item>
+      </mat-nav-list>
   </mat-toolbar-row>
 </mat-toolbar>

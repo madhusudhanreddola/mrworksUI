@@ -10,6 +10,9 @@ const routes: Routes = [{
   children: [{
     path:'',
     component: HomeComponent
+  },{
+    path:'viewPeachSafe',
+    component: LayoutComponent
   }]
 }];
 

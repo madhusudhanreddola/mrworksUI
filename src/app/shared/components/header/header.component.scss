@@ -1,7 +1,21 @@
 :host{
     .mat-toolbar {
         // background-color: #175959;
-        padding-top: 10px;
+        padding-top: 0px;
+
+        mat-toolbar-row{
+            height: auto;
+        }
+
+        .reg-padding{
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        .small-padding{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
     }
 
     .menu-text-button {
@@ -9,12 +23,21 @@
         font-size: medium; 
         background: none !important; 
         border: none !important;
+        vertical-align: middle;
     }
 
     mat-icon{
-        color: white;
+        color: white;            
+    }
+
+    .menu-text-button mat-icon{
+        margin-right: 0px !important;
+    }
+
+    .menu-toggle-btn{
         font-size: 40px;
-        padding-right: 10px;
+        margin-right: 20px;
+        vertical-align: middle;
     }
 }
 
