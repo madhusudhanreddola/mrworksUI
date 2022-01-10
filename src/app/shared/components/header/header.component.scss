@@ -1,43 +1,32 @@
 :host{
+   
     .mat-toolbar {
-        // background-color: #175959;
-        padding-top: 0px;
-
-        mat-toolbar-row{
-            height: auto;
-        }
-
-        .reg-padding{
-            padding-top: 25px;
-            padding-bottom: 25px;
-        }
-
-        .small-padding{
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
+        background-color: #175959 !important;
+        padding-top: 10px;
+        top:0;
     }
+
+
 
     .menu-text-button {
         color: white; 
         font-size: medium; 
         background: none !important; 
         border: none !important;
-        vertical-align: middle;
     }
 
     mat-icon{
-        color: white;            
-    }
-
-    .menu-text-button mat-icon{
-        margin-right: 0px !important;
-    }
-
-    .menu-toggle-btn{
+        color: white;
         font-size: 40px;
-        margin-right: 20px;
-        vertical-align: middle;
+        padding-right: 10px;
     }
 }
 
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    
+  }

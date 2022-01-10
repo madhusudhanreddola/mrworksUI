@@ -8,27 +8,20 @@ import { MatMenuModule } from '@angular/material/menu';
 import { HomeComponent } from './components/home/home.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MenuItemComponent } from './components/menu-item/menu-item.component';
-import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-import { MatListModule } from "@angular/material/list";
+
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    HomeComponent,
-    MenuItemComponent
+    HomeComponent
   ],
   imports: [
     CommonModule,
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,
-    FlexLayoutModule,    
-    RouterModule,
-    HttpClientModule,
-    MatListModule,
+    FlexLayoutModule
   ],
   exports: [
     HeaderComponent,

@@ -1,42 +1,12 @@
 <div>
-  <a mat-menu-item [matMenuTriggerFor]="menu" class="menu-text-button"><mat-icon>keyboard_arrow_right</mat-icon>Cloud</a>
-
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>View PeachSafe</button>
-      <button mat-menu-item>Open</button>
-      <button mat-menu-item [matMenuTriggerFor]="recent"><mat-icon>keyboard_arrow_right</mat-icon>Recent</button>
-    </mat-menu>
-    
-    <mat-menu #recent="matMenu">
-      <button mat-menu-item>File 1</button>
-      <button mat-menu-item>File 2</button>
-    </mat-menu>
-
-    <a mat-menu-item [matMenuTriggerFor]="aboveMenu" class="menu-text-button"><mat-icon>keyboard_arrow_right</mat-icon>Above</a>
-    <!-- #docregion menu-position -->
-    <mat-menu #aboveMenu="matMenu" yPosition="above">
-    <!-- #enddocregion menu-position -->
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
-    </mat-menu>
-    
-    <a mat-menu-item [matMenuTriggerFor]="belowMenu" class="menu-text-button"><mat-icon>keyboard_arrow_right</mat-icon>Below</a>
-    <mat-menu #belowMenu="matMenu" yPosition="below">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
-    </mat-menu>
-    
-    <a mat-menu-item [matMenuTriggerFor]="beforeMenu" class="menu-text-button"><mat-icon>keyboard_arrow_right</mat-icon>Before checl fopr length</a>
-    <mat-menu #beforeMenu="matMenu" xPosition="before">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
-    </mat-menu>
-    
-    
-    <a mat-menu-item [matMenuTriggerFor]="afterMenu" class="menu-text-button"><mat-icon>keyboard_arrow_right</mat-icon>After</a>
-    <mat-menu #afterMenu="matMenu" xPosition="after">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
-    </mat-menu>
-
+  <button mat-button [matMenuTriggerFor]="menu">Cloud</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>View PeachSafe</button>
+    <button mat-menu-item>Open</button>
+    <button mat-menu-item [matMenuTriggerFor]="recent">Recent</button>
+  </mat-menu>
+  <mat-menu #recent="matMenu">
+    <button mat-menu-item>File 1</button>
+    <button mat-menu-item>File 2</button>
+  </mat-menu>
 </div>
