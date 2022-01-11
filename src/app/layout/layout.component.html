@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <app-header (toggleSideBarForMe)="sideBarToggler()"  [deviceLayout]="deviceLayout"></app-header>
-
+<mat-drawer-container style="background: transparent;">
+    <mat-drawer mode="over" [opened]="sideBarOpen">
+      <app-sidebar></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content style="background: transparent;">
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
 <div class="ftr-div">
     <app-footer></app-footer>
 </div>

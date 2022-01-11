@@ -1,32 +1,28 @@
 :host{
    
-    .mat-toolbar {
-        background-color: #175959 !important;
+    color: black;
+
+    .mat-toolbar {        
         padding-top: 10px;
-        top:0;
+        background: rgba(0, 77, 64 , 0.1);
+        z-index: 999;
     }
 
+    mt-tl-bg-light{
+        background: rgba(0, 77, 64 , 0.1);
+    }
 
+    mt-tl-bg-dark{
+        background: rgba(0, 77, 64 , 1);
+    }
 
     .menu-text-button {
-        color: white; 
         font-size: medium; 
-        background: none !important; 
         border: none !important;
     }
 
     mat-icon{
-        color: white;
         font-size: 40px;
         padding-right: 10px;
     }
 }
-
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    
-  }

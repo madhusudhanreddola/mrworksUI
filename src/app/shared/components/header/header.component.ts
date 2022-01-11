@@ -13,6 +13,9 @@ export class HeaderComponent implements OnInit {
 
   imgSrc: string = '/assets/images/gta-wordmark--white.svg';
 
+  
+  bgCustomClass:string ='mt-tl-bg-light';
+
   constructor() { }
 
   ngOnInit(): void {
