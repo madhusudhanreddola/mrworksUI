@@ -31,4 +31,12 @@ export class HeaderComponent implements OnInit {
     }, 300);
   }
 
+  tbMouseOver(){
+    this.bgCustomClass ='mt-tl-bg-dark';
+  }
+
+  tbMouseOut(){
+    this.bgCustomClass ='mt-tl-bg-light';
+  }
+
 }

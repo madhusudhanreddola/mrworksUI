@@ -4,16 +4,17 @@
 
     .mat-toolbar {        
         padding-top: 10px;
-        background: rgba(0, 77, 64 , 0.1);
+        background: rgba(0, 77, 64 , 0.2);
         z-index: 999;
     }
 
-    mt-tl-bg-light{
-        background: rgba(0, 77, 64 , 0.1);
+    
+    .mt-tl-bg-light {
+        background: rgba(0, 77, 64 , 0.2) ;
     }
 
-    mt-tl-bg-dark{
-        background: rgba(0, 77, 64 , 1);
+    .mt-tl-bg-dark {
+        background: rgba(0, 77, 64 , 0.7) ;
     }
 
     .menu-text-button {

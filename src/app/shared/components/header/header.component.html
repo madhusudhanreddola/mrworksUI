@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<mat-toolbar color="primary" ngClass="bg-custom-class" >
+<mat-toolbar color="primary" [ngClass]="bgCustomClass" (mouseover)="tbMouseOver()"  (mouseout)="tbMouseOut()" >
   <mat-toolbar-row style="padding-top: 3%; padding-bottom: 3%;">
     <div fxFlex fxLayout="row" fxLayoutGap="20px">
       <div>
