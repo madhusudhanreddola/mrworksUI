@@ -9,6 +9,8 @@ export class LayoutComponent implements OnInit {
 
   sideBarOpen = false;
   deviceLayout = 'web';
+  showVideoBg = true;
+
 
   constructor( breakpointObserver: BreakpointObserver ) { 
     breakpointObserver.observe([
@@ -33,6 +35,7 @@ export class LayoutComponent implements OnInit {
   activateMobileLayout(){
     this.deviceLayout = "mobile";
     // this.sideBarOpen = false;
+    // this.showVideoBg = false;
   }
 
   activateWebLayout(){

@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<video autoplay muted loop id="myVideo" *ngIf="showVideoBg">
+  <source src="/assets/videos/bg-blue-229.mp4" type="video/mp4">
+  <!--<source src="/assets/videos/bg-mountains-2392.mp4" type="video/mp4">-->
+  Your browser does not support HTML5 video.
+</video>
 <app-header (toggleSideBarForMe)="sideBarToggler()"  [deviceLayout]="deviceLayout"></app-header>
 <mat-drawer-container style="background: transparent;">
     <mat-drawer mode="over" [opened]="sideBarOpen">
